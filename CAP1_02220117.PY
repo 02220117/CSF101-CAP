@@ -26,8 +26,6 @@ def calculate_score(input_file):
             shape, outcome = line.strip().split()  # Split line into shape and outcome
             score = scores[shape] + outcomes[outcome]  # Calculate score for the round
             total_score += score  # Add round score to total score
-            
-            print(f"\nMy choice: {shape} \nOutcome: {outcome} \nRound score: {score}")  # Prints the input from the file and score for each round
     
     return total_score
 
