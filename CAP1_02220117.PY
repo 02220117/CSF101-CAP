@@ -26,7 +26,7 @@ def calculate_score(input_file):
             shape, outcome = line.strip().split()  # Split line into shape and outcome
             score = scores[shape] + outcomes[outcome]  # Calculate score for the round
             total_score += score  # Add round score to total score
-    
+        
     return total_score
 
 #Reads the input file and calculates the total outcome
@@ -35,5 +35,5 @@ def main():
     total_score = calculate_score(input_file)
     print("\nTotal score:", total_score)
 
-if __name__ == "_main_":
+if __name__ == "__main__":
     main()
