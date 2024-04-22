@@ -20,6 +20,7 @@ def read_input(file_path):
     rounds = []
     with open(file_path, 'r') as file:
         for line in file:
+<<<<<<< HEAD
             shape, outcome = line.strip().split()
             rounds.append((shape, outcome))
     return rounds
@@ -49,5 +50,17 @@ rounds = read_input(file_path)
 total_score = calculate_score(rounds)
 print("Total Score:", total_score)
 
+=======
+            shape, outcome = line.strip().split()  # Split line into shape and outcome
+            score = scores[shape] + outcomes[outcome]  # Calculate score for the round
+            total_score += score  # Add round score to total score
+        
+    return total_score
+>>>>>>> 56ae473e361d701643757c17e3de4d681073c3b7
 
 
+<<<<<<< HEAD
+=======
+if __name__ == "__main__":
+    main()
+>>>>>>> 56ae473e361d701643757c17e3de4d681073c3b7
