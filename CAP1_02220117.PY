@@ -16,37 +16,37 @@
 # Put your number here: 7
 ################################
 
-def read_input(file_path):
-    rounds = []
-    with open(file_path, 'r') as file:
+def input(file):
+    all_rounds = []
+    with open(file, 'r') as file:
         for line in file:
             shape, outcome = line.strip().split()
-            rounds.append((shape, outcome))
-    return rounds
+            all_rounds.append((shape, outcome))
+    return all_rounds
 
-def calculate_score(rounds):
-    # Define scores for each shape and outcome directly
+def score_calculated(all_rounds):
+    # Defining the scores for the shapes and outcomes
     scores = {
         ('A', 'X'): 3, ('A', 'Y'): 4, ('A', 'Z'): 8,
         ('B', 'X'): 1, ('B', 'Y'): 5, ('B', 'Z'): 9,
         ('C', 'X'): 2, ('C', 'Y'): 6, ('C', 'Z'): 7
     }
     
-    # Initialize score to 0
+    # Initializing the score to zero
     score = 0
-    # Iterate through each round
-    for shape, outcome in rounds:
-        # Get the score from the predefined scores
+    # Iterating through each round
+    for shape, outcome in all_rounds:
+
         shape_score = scores[(shape, outcome)]
-        # Add the shape score to the total score
+
         score += shape_score
 
     return score
 
-# Main program
-file_path = "input_7_cap1.txt"  # Replace with the path to your input file
-rounds = read_input(file_path)
-total_score = calculate_score(rounds)
+#Calcuting the score in the file
+file = "input_7_cap1.txt"  
+all_all_rounds = input(file)
+total_score = score_calculated(all_all_rounds)
 print("Total Score:", total_score)
 
 
